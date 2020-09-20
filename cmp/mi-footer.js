@@ -1,6 +1,6 @@
 class MiFooter extends HTMLElement {
   connectedCallback() {
-    this.innerHTML = /* html*/
+    this.innerHTML = /* html */
       `Copyright &copy; Gilberto Pachecco Gallegos`;
   }
 }
