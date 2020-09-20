@@ -1,8 +1,9 @@
 /* Este archivo debe estar colocado en la carpeta raíz del sitio.
  * cualquier cambio en el contenido de este archivo hace que el service worker
  * se reinstale. Normalmente se cambia el número en el nombre del caché cuando
- * cambia el contenido de los archivos. */
-const CACHE = "dmppwa____1.0";
+ * cambia el contenido de los archivos. Espera 11 minutos después de hacer los
+ * cambios en tu sitio, para depués actualizar este archivo. */
+const CACHE = "dmppwa-1";
 
 /**  Archivos requeridos para que la aplicación funcione fuera de línea. */
 const ARCHIVOS = [
