@@ -3,7 +3,7 @@
  * se reinstale. Normalmente se cambia el número en el nombre del caché cuando
  * cambia el contenido de los archivos. Espera 11 minutos después de hacer los
  * cambios en tu sitio, para depués actualizar este archivo. */
-const CACHE = "dmppwa-1_0";
+const CACHE = "dmppwa-1.00";
 
 /**  Archivos requeridos para que la aplicación funcione fuera de línea. */
 const ARCHIVOS = [
