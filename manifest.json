@@ -1,5 +1,5 @@
 {
-    "short_name": "dmppwa",
+    "short_name": "dmmpwa",
     "name": "Ejemplo de PWA",
     "start_url": "/index.html",
     "display": "standalone",
