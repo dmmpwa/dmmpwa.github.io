@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+      content="width=device-width,
+       initial-scale=1.0">
+    <title>GPS</title>
+    <script src="js/regSw.js">
+    </script>
+    <meta name="theme-color"
+      content="#81d4f4">
+    <link rel="icon" sizes="32x32"
+      href="favicon.ico">
+    <link rel="manifest"
+      href="site.webmanifest">
+    <script type="module"
+      src="cmp/mi-nav.js">
+      </script>
+    <link rel="stylesheet"
+      href="css/estilos.css">
+  <body>
+    <script src="js/agent.js">
+    </script>
+    <header>
+      <div class="herramientas">
+        <h1>GPS</h1>
+      </div>
+    </header>
+    <div class="contenido">
+      <p class="campo">
+        <output id="latitud">
+        </output>
+        <label for="latitud">
+          Latitud
+        </label>
+      </p>
+      <p class="campo">
+        <output id="longitud">
+        </output>
+        <label for="longitud">
+          Longitud
+        </label>
+      </p>
+    </div>
+    <mi-nav></mi-nav>
+    <script>
+      navigator.geolocation.
+        watchPosition(p => {
+          latitud.value =
+            p.coords.latitude;
+          longitud.value =
+            p.coords.longitude;
+        });
+    </script>
+  </body>
+</html>

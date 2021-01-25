@@ -1,3 +1,101 @@
+@import 'https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap';
+@import 'https://fonts.googleapis.com/css2?family=Material+Icons';
+@import "mi-nav.css";
+@import "campo.css";
+
+/* :root
+  * Elemento raíz del documento.
+  * En este caso corresponde al
+  * elemento html. */
+:root {
+  /* CUSTOM PROPERTIES
+   * Valores que puede definir el
+   * desarrollador y reutilizar
+   * en todas las definiciones de
+   * estilos.
+   * Deben iniciar con -- y
+   * colocarse en el elemento
+   * raíz. */
+  /* Propiedades de la interfaz */
+  --colorPrimario: black;
+  --colorPrimarioFondo: #81d4fa;
+  --colorActive: #4646462c;
+  --colorContenido: black;
+  --colorContenidoFondo: white;
+  /* Propiedades para campos */
+  --colorSinFoco: gray;
+  --colorConFoco: #03a9f4;
+  --colorError: #b00020;
+  --colorCampo: #eeeeee;
+  /* Los 2 primeros fonts son para
+   * apple y "Roboto" es para
+   * Android. */
+  --font-family: -apple-system,
+    BlinkMacSystemFont, Roboto,
+    sans-serif;
+  /* Uso de la custom property
+   * "--colorContenido". */
+  color: var(--colorContenido);
+  font-family: var(--font-family);
+  background-color:
+    var(--colorContenidoFondo);
+}
+
 body {
-  font-family: sans-serif
+  margin: 0;
+}
+
+header {
+  color: var(--colorPrimario);
+  background-color:
+    var(--colorPrimarioFondo);
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.herramientas {
+  display: flex;
+  padding: 1rem;
+  position: relative;
+  gap: 1.5rem;
+}
+
+h1 {
+  margin: 0 auto 0 0;
+  padding: 0;
+  font-size: 1.25rem;
+}
+
+.ios h1 {
+  margin: 0 auto 0 auto;
+}
+
+.ios .acciones {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.icono {
+  border: none;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  /* Quita una especie de borde
+   * alrededor del borde para
+   * indicar que el elemento tiene
+   * el foco. */
+  outline: none;
+}
+
+.icono:active {
+  background-color:
+    var(--colorActive);
+}
+
+.contenido {
+  padding: 0 1rem;
+  margin-bottom: 4.75rem;
 }

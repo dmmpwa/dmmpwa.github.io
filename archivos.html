@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+      content="width=device-width,
+       initial-scale=1.0">
+    <title>
+      Archivos y Cámara
+    </title>
+    <script src="js/regSw.js">
+    </script>
+    <meta name="theme-color"
+      content="#81d4f4">
+    <link rel="icon" sizes="32x32"
+      href="favicon.ico">
+    <link rel="manifest"
+      href="site.webmanifest">
+    <script type="module"
+      src="cmp/mi-nav.js">
+      </script>
+    <link rel="stylesheet"
+      href="css/estilos.css">
+  <body>
+    <script src="js/agent.js">
+    </script>
+    <header>
+      <div class="herramientas">
+        <h1>Archivos y Cámara</h1>
+      </div>
+    </header>
+    <div class="contenido">
+      <p class="campo">
+        <input id="foto"
+          type="file"
+          accept="image/*"
+          capture="camera">
+        <label for="foto">
+          Foto de Móvil
+        </label>
+      </p>
+      <p class="campo">
+        <input id="video"
+          type="file"
+          accept="video/*"
+          capture="">
+        <label for="video">
+          Video de Móvil
+        </label>
+      </p>
+      <p class="campo">
+        <input id="archivo"
+          type="file">
+        <label for="archivo">
+          Archivo
+        </label>
+      </p>
+      <p>
+        <output id="salida">
+        </output>
+      </p>
+    </div>
+    <mi-nav></mi-nav>
+  </body>
+</html>

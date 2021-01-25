@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+      content="width=device-width,
+       initial-scale=1.0">
+    <title>Ayuda</title>
+    <script src="js/regSw.js">
+    </script>
+    <meta name="theme-color"
+      content="#81d4f4">
+    <link rel="icon" sizes="32x32"
+      href="favicon.ico">
+    <link rel="manifest"
+      href="site.webmanifest">
+    <script type="module"
+      src="cmp/mi-nav.js">
+      </script>
+    <link rel="stylesheet"
+      href="css/estilos.css">
+  <body>
+    <script src="js/agent.js">
+    </script>
+    <header>
+      <div class="herramientas">
+        <h1>Ayuda</h1>
+      </div>
+    </header>
+    <div class="contenido">
+      <p>Ejemplo de PWA</p>
+      <p class="campo">
+        <output id="agent">
+        </output>
+        <label for="agent">
+          User Agent
+        </label>
+      </p>
+      <p>
+        <a href="https://github.com/dmmpwa/dmmpwa.github.io">
+          Documentación del
+          proyecto.</a>
+      </p>
+      <p>
+        &copy; 2021
+        Gilberto Pacheco Gallegos
+      </p>
+    </div>
+    <mi-nav></mi-nav>
+    <script>
+      agent.value = USER_AGENT;
+    </script>
+  </body>
+</html>

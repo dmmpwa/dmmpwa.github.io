@@ -1,38 +1,168 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+      content="width=device-width,
+       initial-scale=1.0">
     <title>Ejemplo de PWA</title>
-    <script src="js/registraServiceWorker.js"></script>
+    <script src="js/regSw.js">
+    </script>
+    <!--
+      Color de la barra de
+      navegación de Chrome en
+      dispositivos móviles.
+    -->
+    <meta name="theme-color"
+      content="#81d4f4">
+    <!--
+      Ícono para la página web.
+      Debe ponerse en la raíz de
+      la página.
+    -->
+    <link rel="icon" sizes="32x32"
+      href="favicon.ico">
+    <!--
+      Configuración de la PWA para
+      Chrome y Edge.
+    -->
+    <link rel="manifest"
+      href="site.webmanifest">
+    <!--
+      Configuración para
+      Web Clip en Safari.
+    -->
+    <meta
+      name="apple-mobile-web-app-title"
+      content="dmppwa">
+    <meta
+      name="apple-mobile-web-app-capable"
+      content="yes">
+    <meta
+      name="apple-mobile-web-app-status-bar-style"
+      content="default">
+    <link rel="apple-touch-icon"
+      href="img/icono2048.png">
+    <link rel="apple-touch-icon"
+      sizes="256x256"
+      href="img/icono256.png">
+    <link
+      rel="apple-touch-icon"
+      sizes="1024x1024"
+      href="img/icono1024.png">
+    <link
+      rel="apple-touch-icon"
+      sizes="2048x2048"
+      href="img/icono2048.png">
 
-    <!-- Ícono para la página web. Debe ponerse en la raíz de la página. -->
-    <link rel="icon" sizes="32x32" href="favicon.ico">
-
-    <!-- Color de la barra de navegación de Chrome en dispositivos móviles. -->
-    <meta name="theme-color" content="#81d4f4">
-
-    <!-- Configuración de la PWA: Chrome y Edge. -->
-    <link rel="manifest" href="manifest.json">
-
-    <!-- Configuración para Web Clip en Safari. -->
-    <meta name="apple-mobile-web-app-title" content="dmppwa">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="default">
-    <link rel="apple-touch-icon" href="img/icono2048.png">
-    <link rel="apple-touch-icon" sizes="256x256" href="img/icono256.png">
-    <link rel="apple-touch-icon" sizes="1024x1024" href="img/icono1024.png">
-    <link rel="apple-touch-icon" sizes="2048x2048" href="img/icono2048.png">
-
-    <script type="module" src="cmp/mi-footer.js"></script>
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet"
+      href="css/estilos.css">
+    <script type="module"
+      src="cmp/mi-nav.js">
+      </script>
   <body>
-    <h1>Ejemplo de PWA</h1>
-    <p>Hola</p>
-    <footer>
-      <p>
-        <mi-footer></mi-footer>
-      </p>
-    </footer>
+    <script src="js/agent.js">
+    </script>
+    <form action="javascript:
+        divide();">
+      <header>
+        <div class="herramientas">
+          <h1>Ejemplo de PWA</h1>
+          <span class="acciones">
+            <button class="icono">
+              <span
+                class="material-icons">
+                done
+              </span>
+            </button>
+          </span>
+        </div>
+      </header>
+      <div class="contenido">
+        <p class="campo">
+          <input id="inA"
+            type="number"
+            step="0.1">
+          <label for="inA">
+            a
+          </label>
+          <small>
+            <output id="msgA">
+              Requerido, 1 decimal
+            </output>
+          </small>
+        </p>
+        <p class="campo">
+          <input id="inB"
+            type="number"
+            step="0.1">
+          <label for="inB">
+            b
+          </label>
+          <small>
+            <output id="msgB">
+              Requerido, 1 decimal
+            </output>
+          </small>
+        </p>
+        <p>
+          <output id="outSalida">
+          </output>
+        </p>
+      </div>
+      <mi-nav></mi-nav>
+    </form>
+    <script>
+      function divide() {
+        try {
+          inA.classList.
+            remove("error");
+          inB.classList.
+            remove("error");
+          msgA.value = `Requerido,
+             1 decimal`;
+          msgB.value = `Requerido,
+             1 decimal`;
+          const a =
+            parseFloat(inA.value);
+          const b =
+            parseFloat(inB.value);
+          let error = false;
+          if (isNaN(a)) {
+            error = true;
+            inA.classList.
+              add("error");
+            msgA.value = `Debe ser
+              un número de 1
+              decimal.`;
+
+          }
+          if (isNaN(b)) {
+            error = true;
+            inB.classList.
+              add("error");
+            msgB.value = `Debe ser
+              un número de 1
+              decimal.`;
+          } else if (b === 0) {
+            error = true;
+            inB.classList.
+              add("error");
+            msgB.value =
+              "No puede ser 0.";
+          }
+          if (error) {
+            outSalida.value = "";
+          } else {
+            outSalida.value =
+              a / b;
+          }
+        } catch (e) {
+          console.error(e);
+          outSalida.value =
+            e.message;
+        }
+      }
+    </script>
   </body>
 </html>
