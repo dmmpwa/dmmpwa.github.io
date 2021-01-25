@@ -18,7 +18,8 @@
   color: var(--colorSinFoco);
 }
 
-.campo>* {
+.campo>output,
+.campo input {
   display: block;
   box-sizing: border-box;
   padding:
