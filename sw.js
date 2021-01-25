@@ -40,7 +40,7 @@ const ARCHIVOS = [
   "index.html",
   "LICENSE",
   "README.md",
-  "manifest.json",
+  "site.webmanifest",
   '/'
 ];
 
