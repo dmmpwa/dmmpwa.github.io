@@ -1,25 +1,25 @@
 {
-    "short_name": "PWA",
-    "name": "Ejemplo de PWA",
-    "start_url": "/index.html",
-    "display": "standalone",
-    "theme_color": "#81d4f4",
-    "background_color": "#ff6d00",
-    "icons": [
-      {
-        "src": "img/icono2048.png",
-        "sizes": "2048x2048",
-        "type": "image/png"
-      },
-      {
-        "src": "img/icono1024.png",
-        "sizes": "1024x1024",
-        "type": "image/png"
-      },
-      {
-        "src": "img/icono256.png",
-        "sizes": "256x256",
-        "type": "image/png"
-      }
-    ]
-  }
+  "short_name": "PWA",
+  "name": "Ejemplo de PWA",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "theme_color": "#81d4f4",
+  "background_color": "#ff6d00",
+  "icons": [
+    {
+      "src": "img/icono2048.png",
+      "sizes": "2048x2048",
+      "type": "image/png"
+    },
+    {
+      "src": "img/icono1024.png",
+      "sizes": "1024x1024",
+      "type": "image/png"
+    },
+    {
+      "src": "img/icono256.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    }
+  ]
+}

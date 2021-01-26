@@ -57,11 +57,14 @@ self.addEventListener("install",
 /* Toma los archivos solicitados
  * de la caché; si no los
  * encuentra, se descargan. */
-self.addEventListener("fetch", evt => {
-  if (evt.request.method === "GET") {
-    evt.respondWith(usaCache(evt));
-  }
-});
+self.addEventListener("fetch",
+  evt => {
+    if (evt.request.method ===
+      "GET") {
+      evt.respondWith(
+        usaCache(evt));
+    }
+  });
 
 self.addEventListener("activate",
   () =>

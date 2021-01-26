@@ -19,8 +19,7 @@ mi-nav ul {
 
 mi-nav a {
   display: block;
-  color:
-    var(--color-letra-primario);
+  color: var(--colorPrimario);
   font-size: 0.75rem;
   text-decoration: none;
   padding-top: 0.5rem;
