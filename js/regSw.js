@@ -1,7 +1,7 @@
 /* invoca a regSw para instalar la
  * aplicación en el caché del
  * navegador. */
-//regSw();
+regSw();
 /** Registra un service worker
  * para instalar la aplicación en
  * el caché del navegador. */

@@ -32,6 +32,7 @@ const ARCHIVOS = [
   "img/icono1024.png",
   "img/icono2048.png",
   "js/agent.js",
+  "js/CtrlDivide.js",
   "js/regSw.js",
   "archivos.html",
   "ayuda.html",
