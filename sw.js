@@ -17,7 +17,7 @@
  * cambios en tu sitio, para
  * depués actualizar este archivo.
  */
-const CACHE = "dmppwa-2.00";
+const CACHE = "dmppwa-2.01";
 
 /** Archivos requeridos para que
  * la aplicación funcione fuera de
