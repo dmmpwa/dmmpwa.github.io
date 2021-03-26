@@ -17,7 +17,7 @@
  * cambios en tu sitio, para
  * depués actualizar este archivo.
  */
-const CACHE = "dmppwa-2.01";
+const CACHE = "dmppwa-2.02";
 
 /** Archivos requeridos para que
  * la aplicación funcione fuera de
@@ -31,7 +31,6 @@ const ARCHIVOS = [
   "gps.html",
   "index.html",
   "LICENSE",
-  "lista.txt",
   "README.md",
   "site.webmanifest",
   "css/colores.css",
