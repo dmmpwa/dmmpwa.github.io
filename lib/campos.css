@@ -1,0 +1,130 @@
+input[type=radio],
+input[type=radio]:checked~.off,
+input[type=checkbox],
+input[type=checkbox]:checked~.off {
+  display: none;
+}
+
+input[type=radio]:not(:checked)~.on,
+input[type=checkbox]:not(:checked)~.on {
+  display: none;
+}
+
+.off {
+  vertical-align: middle;
+  color: var(--colCheckFondo);
+  font-size: 48px;
+}
+
+.on {
+  vertical-align: middle;
+  color: var(--colCheckOn);
+  font-size: 48px;
+}
+
+campo-dinamico {
+  display: block;
+  position: relative;
+  color: var(--colCampoSinFoco);
+  background-color:
+    var(--colCampoFondo);
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+  margin: 1rem 0;
+  padding: 1.25rem 0 0 0;
+}
+
+campo-dinamico:hover {
+  background-color:
+    var(--colCampoFondoHover);
+}
+
+campo-dinamico:focus-within {
+  background-color:
+    var(--colCampoFondoFocus);
+}
+
+campo-dinamico label {
+  position: absolute;
+  top: 1.75rem;
+  left: 1rem;
+  font-size: 1rem;
+  color: var(--colCampoSinFoco);
+  transition: 0.3s ease-in;
+}
+
+campo-dinamico .valor+label,
+campo-dinamico :focus+label,
+campo-dinamico [type=file]+label {
+  top: 0.5rem;
+  font-size: 0.75rem;
+}
+
+campo-dinamico>output,
+campo-dinamico select,
+campo-dinamico input,
+campo-dinamico textarea {
+  display: block;
+  box-sizing: border-box;
+  padding:
+    0.5rem 1rem 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+campo-dinamico select,
+campo-dinamico input,
+campo-dinamico textarea {
+  background-color: transparent;
+  font-family: var(--fontFamily);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color:
+    var(--colCampoSinFoco);
+  resize: none;
+  outline: none;
+  width: 100%;
+  transition: 0.3s ease-in;
+}
+
+campo-dinamico select:focus,
+campo-dinamico input:focus,
+campo-dinamico textarea:focus {
+  border-bottom-width: 2px;
+}
+
+campo-dinamico small {
+  display: block;
+  height: 1em;
+  font-size: 0.75rem;
+  padding-left: 1rem;
+  background-color:
+    var(--colContenidoFondo);
+  transition: 0.3s ease-in;
+}
+
+campo-dinamico :focus+label {
+  color: var(--colCampoFoco);
+}
+
+campo-dinamico :focus {
+  border-bottom-color:
+    var(--colCampoFoco);
+}
+
+campo-dinamico :invalid,
+campo-dinamico :focus:invalid,
+campo-dinamico .error,
+campo-dinamico :focus.error {
+  border-bottom-color:
+    var(--colError);
+}
+
+campo-dinamico :invalid+label,
+campo-dinamico .error+label,
+campo-dinamico :invalid~small,
+campo-dinamico .error~small {
+  color: var(--colError);
+}

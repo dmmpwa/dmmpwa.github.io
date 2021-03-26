@@ -3,12 +3,9 @@ mi-nav {
   left: 0;
   right: 0;
   bottom: 0;
-}
-
-mi-nav ul {
-  color: var(--colorPrimario);
+  color: var(--colPrimario);
   background-color:
-    var(--colorPrimarioFondo);
+    var(--colPrimarioFondo);
   display: flex;
   list-style-type: none;
   justify-content: center;
@@ -19,7 +16,7 @@ mi-nav ul {
 
 mi-nav a {
   display: block;
-  color: var(--colorPrimario);
+  color: var(--colPrimario);
   font-size: 0.75rem;
   text-decoration: none;
   padding-top: 0.5rem;
@@ -31,7 +28,7 @@ mi-nav a {
 
 mi-nav a:active {
   background-color:
-    var(--colorActive);
+    var(--colActive);
 }
 
 mi-nav .material-icons {

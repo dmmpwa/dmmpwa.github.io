@@ -1,57 +1,59 @@
-const REQUERIDO =
-  "Requerido, 1 decimal";
-const SER_DEC = `Debe ser
-  un número de 1 decimal.`;
-const NO_0 = "No puede ser 0.";
+import { msg } from "../lib/movil.js";
 
-/** @type {HTMLFormElement} */
-const forma = document["forma"];
+const REQUERIDO = "*Requerido";
+const REQUERIDO_NO_0 =
+  "*Requerido, no 0";
+const NO_0 = "No puede ser 0";
 
-forma.addEventListener(
+const form =
+  document.querySelector("form");
+/** @type {HTMLInputElement} */
+const inA =
+  document.querySelector("#inA");
+/** @type {HTMLOutputElement} */
+const msgA =
+  document.querySelector("#msgA");
+/** @type {HTMLInputElement} */
+const inB =
+  document.querySelector("#inB");
+/** @type {HTMLOutputElement} */
+const msgB =
+  document.querySelector("#msgB");
+
+inA.addEventListener("input",
+  () =>
+    msg(inA, msgA, REQUERIDO));
+inB.addEventListener("input",
+  validaB);
+form.addEventListener(
   "submit", divide);
+
+function validaB() {
+  const b = inB.valueAsNumber;
+  if (isNaN(b) || b !== 0) {
+    inB.setCustomValidity("");
+  } else {
+    inB.setCustomValidity(NO_0);
+  }
+  msg(inB, msgB, REQUERIDO_NO_0);
+}
 
 /** @param {Event} evt */
 function divide(evt) {
   try {
     evt.preventDefault();
-    forma.a.classList.
-      remove("error");
-    forma.b.classList.
-      remove("error");
-    forma.msgA.value = REQUERIDO;
-    forma.msgB.value = REQUERIDO;
-    const a =
-      parseFloat(forma.a.value);
-    const b =
-      parseFloat(forma.b.value);
-    let error = false;
-    if (isNaN(a)) {
-      error = true;
-      forma.inA.classList.
-        add("error");
-      forma.msgA.value = SER_DEC;
-
-    }
-    if (isNaN(b)) {
-      error = true;
-      forma.inB.classList.
-        add("error");
-      forma.msgB.value = SER_DEC;
-    } else if (b === 0) {
-      error = true;
-      forma.inB.classList.
-        add("error");
-      forma.msgB.value = NO_0;
-    }
-    if (error) {
-      forma.outSalida.value = "";
-    } else {
-      forma.outSalida.value =
+    if (inA.validity.valid &&
+      inB.validity.valid) {
+      const a = inA.valueAsNumber;
+      const b = inB.valueAsNumber;
+      form.outSalida.value =
         a / b;
+    } else {
+      form.outSalida.value = "";
     }
   } catch (e) {
     console.error(e);
-    forma.outSalida.value =
+    form.outSalida.value =
       e.message;
   }
 }

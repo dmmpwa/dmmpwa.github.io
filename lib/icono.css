@@ -1,0 +1,16 @@
+.icono {
+  border: none;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  /* Quita una especie de borde
+   * alrededor del borde para
+   * indicar que el elemento tiene
+   * el foco. */
+  outline: none;
+}
+
+.icono:active {
+  background-color:
+    var(--colActive);
+}

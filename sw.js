@@ -1,4 +1,3 @@
-// @ts-nocheck
 /* Este archivo debe estar
  * colocado en la carpeta raíz del
  * sitio.
@@ -18,31 +17,46 @@
  * cambios en tu sitio, para
  * depués actualizar este archivo.
  */
-const CACHE = "dmppwa-1.000";
+const CACHE = "dmppwa-2.000";
 
 /** Archivos requeridos para que
  * la aplicación funcione fuera de
- * línea. */
+ * línea.
+ */
 const ARCHIVOS = [
-  "cmp/mi-nav.js",
-  "css/campo.css",
-  "css/estilos.css",
-  "css/mi-nav.css",
-  "img/icono256.png",
-  "img/icono1024.png",
-  "img/icono2048.png",
-  "js/agent.js",
-  "js/CtrlDivide.js",
-  "js/regSw.js",
   "archivos.html",
   "ayuda.html",
   "favicon.ico",
+  "formulario.html",
   "gps.html",
   "index.html",
   "LICENSE",
+  "lista.txt",
   "README.md",
   "site.webmanifest",
-  '/'
+  "css/colores.css",
+  "css/estilos.css",
+  "img/icono1024.png",
+  "img/icono2048.png",
+  "img/icono256.png",
+  "js/config.js",
+  "js/CtrlDivide.js",
+  "js/regSw.js",
+  "lib/campo-dinamico.js",
+  "lib/campos.css",
+  "lib/icono.css",
+  "lib/material-icons.css",
+  "lib/MaterialIcons-Regular.codepoints",
+  "lib/MaterialIcons-Regular.ttf",
+  "lib/mi-nav.css",
+  "lib/movil.js",
+  "lib/principal.css",
+  "lib/roboto-v20-latin-700.woff",
+  "lib/roboto-v20-latin-700.woff2",
+  "lib/roboto-v20-latin-regular.woff",
+  "lib/roboto-v20-latin-regular.woff2",
+  "lib/roboto.css",
+  "/"
 ];
 
 self.addEventListener("install",
@@ -51,6 +65,7 @@ self.addEventListener("install",
     /* Realiza la instalación.
      * Carga los archivos
      * requeridos en la caché. */
+    // @ts-ignore
     evt.waitUntil(cargaCache());
   });
 
@@ -59,8 +74,10 @@ self.addEventListener("install",
  * encuentra, se descargan. */
 self.addEventListener("fetch",
   evt => {
+    // @ts-ignore
     if (evt.request.method ===
       "GET") {
+      // @ts-ignore
       evt.respondWith(
         usaCache(evt));
     }

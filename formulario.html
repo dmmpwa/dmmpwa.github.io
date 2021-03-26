@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width,
+     initial-scale=1.0">
+  <title>Formulario</title>
+  <meta name="theme-color"
+    content="#81d4f4">
+  <link rel="icon" sizes="32x32"
+    href="favicon.ico">
+  <link rel="manifest"
+    href="site.webmanifest">
+  <link rel="stylesheet"
+    href="css/estilos.css">
+</head>
+<body>
+  <script type="module"
+    src="js/config.js"></script>
+  <form id="form" novalidate>
+    <header>
+      <h1>Formulario</h1>
+      <span class="acciones">
+        <button class="icono"><span
+            class="material-icons">done</span></button>
+      </span>
+    </header>
+    <campo-dinamico>
+      <input id="inA"
+        type="number"
+        step="0.1"
+        required>
+      <label for="inA">
+        *a
+      </label>
+      <small>
+        <output id="msgA">
+          *Requerido
+        </output>
+      </small>
+    </campo-dinamico>
+    <campo-dinamico>
+      <input id="inB"
+        type="number"
+        step="0.1"
+        required>
+      <label for="inB">
+        *b
+      </label>
+      <small>
+        <output id="msgB">
+          *Requerido, no 0
+        </output>
+      </small>
+    </campo-dinamico>
+    <campo-dinamico>
+      <output id="outSalida">
+      </output>
+      <label for="outSalida">
+        Resultado
+      </label>
+    </campo-dinamico>
+    <mi-nav></mi-nav>
+  </form>
+  <script type="module"
+    src="js/CtrlDivide.js">
+    </script>
+</body>
+</html>
