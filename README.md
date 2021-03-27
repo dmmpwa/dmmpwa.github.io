@@ -15,18 +15,37 @@ depués actualizar sw.js.
 
  Get-ChildItem -path . -Recurse | Select Directory,Name | Out-File lista.txt
 
-Puedes colocar las comillas del
-final de cada línea desde Visual
-Studio Code
- 
+Quita las carpetas y el archivo sw.js del listado.
+
+Cambia los \ por / desde Visual Studio Code
+
 Ctrl+H
--> selecciona el botón ".*"
 
-Find: \s*$
+Find:\
 
-Replace: ",
+Replace:/,
 
 Reemplaza todo
 
-Quita el archivo sw.js del
-listado.
+ 
+Coloca las comillas del final de cada línea
+
+Ctrl+H
+-> selecciona el botón ".*"
+
+Find:\s*$
+
+Replace:",
+
+Reemplaza todo
+
+Cambia las secuencias de espacios por /
+
+Ctrl+H
+-> selecciona el botón ".*"
+
+Find:\s+
+
+Replace:/
+
+Reemplaza todo
