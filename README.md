@@ -28,7 +28,7 @@ Replace:/,
 Reemplaza todo
 ```
  
-### Coloca las comillas del final de cada línea
+### Coloca las comillas del final de cada línea desde Visual Studio Code
 ```
 Ctrl+h -> selecciona el botón ".*"
 Find:\s*$
@@ -36,10 +36,10 @@ Replace:",
 Reemplaza todo y luego ESC
 ```
 
-### Coloca las comillas iniciales
+### Coloca las comillas iniciales desde Visual Studio Code
 Marca la carpeta inicial, Shift+Ctrl+l bórrala y pon las " y luego ESC
 
-### Cambia las secuencias de espacios por /
+### Cambia las secuencias de espacios por / desde Visual Studio Code
 ```
 Ctrl+h -> selecciona el botón ".*"
 Find:\s+
@@ -47,7 +47,7 @@ Replace:/
 Reemplaza todo
 ```
 
-### Cambia las "/ por "
+### Cambia las "/ por " desde Visual Studio Code
 ```
 Ctrl+h -> quita selección del botón ".*"
 Find:"/
