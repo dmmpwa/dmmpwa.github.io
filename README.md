@@ -19,7 +19,7 @@ Get-ChildItem -path . -Recurse | Select Directory,Name | Out-File lista.txt
 
 Quita las carpetas y el archivo sw.js del listado.
 
-###Cambia los \ por / desde Visual Studio Code
+### Cambia los \ por / desde Visual Studio Code
 
 ```
 Ctrl+h
